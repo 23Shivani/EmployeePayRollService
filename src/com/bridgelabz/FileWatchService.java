@@ -34,7 +34,7 @@ public class FileWatchService {
 	}
 
 	@SuppressWarnings("rawtypes")
-	void processEvents() {
+	public void processEvents() {
 		while (true) {
 			WatchKey key; // wait for the key to be signalled
 			try {
