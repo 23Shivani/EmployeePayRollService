@@ -30,4 +30,9 @@ public class EmployeePayrollData {
 		this.salary = salary;
 	}
 	
+	@Override
+	public String toString() {
+		return "EmployeePayrollData [name=" + name + ", id=" + id + ", salary=" + salary + "]";
+	}
+	
 }
