@@ -1,4 +1,4 @@
-package om.bridgelabz;
+package com.bridgelabz;
 
 public class EmployeePayrollData {
 	private String name;

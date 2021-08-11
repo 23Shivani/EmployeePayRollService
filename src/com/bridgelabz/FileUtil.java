@@ -1,4 +1,4 @@
-package om.bridgelabz;
+package com.bridgelabz;
 
 import java.io.File;
 

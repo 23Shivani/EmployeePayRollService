@@ -1,4 +1,4 @@
-package om.bridgelabz;
+package com.bridgelabz;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;

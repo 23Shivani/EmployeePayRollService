@@ -1,10 +1,14 @@
-package om.bridgelabz;
+package com.bridgelabz;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class EmployeePayrollService {
+	public enum IOService {
+		CONSOLE_IO, FILE_IO, DB_IO, REST_IO
+	}
+
 	private List<EmployeePayrollData> employeePayrollDataList = new ArrayList<>();
 
 	public EmployeePayrollService() {
@@ -29,6 +33,22 @@ public class EmployeePayrollService {
 
 	private void writeEmployeePayrollData() {
 		System.out.println("Writing employee payroll to console\n" + employeePayrollDataList);
+	}
+
+	public void writeEmployeeData(IOService ioService) {
+		if (ioService.equals(IOService.CONSOLE_IO))
+			System.out.println("Writing Employee Payroll Roster in Console\n" + employeePayrollDataList);
+		else if (ioService.equals(IOService.FILE_IO)) {
+			EmployeePayrollFileIOService.writeData(employeePayrollDataList);
+		}
+	}
+
+	public long countEntries(IOService ioService) {
+		if (ioService.equals(IOService.CONSOLE_IO))
+			return employeePayrollDataList.size();
+		else if (ioService.equals(IOService.FILE_IO))
+			return EmployeePayrollFileIOService.countEntries();
+		return 0;
 	}
 
 	public static void main(String[] args) {

@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
 import org.junit.Assert;
 import org.junit.Test;
 
-import om.bridgelabz.FileUtil;
+import com.bridgelabz.FileUtil;
 
 public class FileAPITestIO {
 	private static String HOME = System.getProperty("user.home");
